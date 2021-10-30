@@ -27,6 +27,8 @@ public class ArrayListe {
         honda.priser[1] = 280_000;
         /** Add
          * .add(verdi);
+         * .add(index, verdi);
+         * 如果index已经有值了，就相当于插入，之前的verdi向后一位
          */
         biler.add(toyota);    //ArrayList 自带方法，向末尾添加元素
         biler.add(honda);
@@ -96,7 +98,7 @@ public class ArrayListe {
         }
         System.out.println();
         /** delete data
-         * .remove(index);
+         * .remove(index / verdi);
          */
         names.remove(0);
         for(String name : names) {
@@ -119,7 +121,18 @@ public class ArrayListe {
          * .trimToSize();
          */
         names.trimToSize();
-        System.out.println(names);  // [Lee, Ole]
+        /** Add
+         * .add(verdi);
+         * .add(index, verdi);
+         * 如果index已经有值了，就相当于插入，之前的verdi向后一位
+         */
+        names.add(0, "Lars");  // Lars, Lee, Ole
+        /**
+         * 注意！打印的时候要用ArrayList.get()!!!,而不是像array一样用中括号[]
+         */
+        for(int i = 0; i < names.size(); i++) {
+            System.out.print(names.get(i) + " ");  // Lars, Lee, Ole
+        }
     }
 
 }

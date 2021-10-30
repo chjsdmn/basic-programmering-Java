@@ -17,12 +17,12 @@ public class ArraySort {
     public static void main(String[] args) {
         Integer[] a = {8,3,0,-1,45,100,-20,42,78,-2};  //int要写成Integer！
         Arrays.sort(a, a.length -3, a.length);  //只排了后三位，[fromIndex, toIndex)
-        printing(a);
+        printing(a);   //8 3 0 -1 45 100 -20 -2 42 78
         Arrays.sort(a);  //从小到大依次排列
-        printing(a);
+        printing(a);   //-20 -2 -1 0 3 8 42 45 78 100
         Comparator<Integer> cmp = new myComparator();  //创建一个自定义类myComparator的对象
         Arrays.sort(a, cmp);  //降序排列
-        printing(a);
+        printing(a);  //100 78 45 42 8 3 0 -1 -2 -20
     }
     static void printing(Integer[] a){
         for(int item : a){

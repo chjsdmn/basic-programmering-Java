@@ -37,7 +37,7 @@ public class Oppgave4 {
         for(int i = 1; i < a.length; i++){
             if(maks < a[i]){
                 maks =a[i];
-                //æmaks_indeks = i;
+                //maks_indeks = i;
             }
         }
         return maks;
