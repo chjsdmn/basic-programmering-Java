@@ -34,7 +34,7 @@ public class StatiskeVariabler {
         System.out.println(enBil);   //Honda har ANTALL_HJUL: 4, og antallHjul: 4
 
         enBil.merke = "Peng";
-        Bil.antallHjul = 3;  //
+        Bil.antallHjul = 3;  //因为没有final，不是常量，所以可以更改 :)
         System.out.println(enBil);  //Peng har ANTALL_HJUL: 4, og antallHjul: 3
 
     }
