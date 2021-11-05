@@ -10,7 +10,7 @@ public class Equals {
     public static void main(String[] args) {
         /**
          * int 是一个基本类型，所以 == 是比较值的大小
-         * Integer是一个类，它缓存了从-128到127之间的所有的整数对象。所以 == 比较后为不等
+         * Integer是一个类，它缓存了从-128到127之间的所有的整数对象。所以超过127的整数 == 比较后为不等
          */
         int a = 100;
         int b = 100;
@@ -18,11 +18,11 @@ public class Equals {
         int c = 1000;
         int d = 1000;
         System.out.println(c == d);  //true
-        Integer x = 100;
-        Integer y = 100;
+        Integer x = 127;
+        Integer y = 127;
         System.out.println(x == y);  //true
-        Integer z = 1000;
-        Integer u = 1000;
+        Integer z = 128;
+        Integer u = 128;
         System.out.println(z == u);  //false
         /**
          * String是类，复合数据类型，== 比较的是内存中的存放地址
@@ -33,7 +33,7 @@ public class Equals {
         System.out.println(m == n);  //true  ==比较的是内存中的存放地址，所以为true
         String p = "hello";
         String q = new String("hello");
-        System.out.println(p == q);  //false  p,q分别引用了两个对象，地址不同，所以是false
+        System.out.println(p == q);  //false  因为q是new出来的，系统给他开辟了一个新的位置，所以p,q分别引用了两个对象，地址不同，所以是false
         System.out.println(p.equals(q)); //true  equal比较的是内容，所以是true
     }
 }
