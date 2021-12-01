@@ -27,7 +27,7 @@ public class Oppgave1 {
             }
         }
         int summen = 0;
-        int antall = 1;
+        //int antall = 1;
         String ut = "";
         for(int i = nedreGrense; i <=øvreGrense; i++){
             if(i == øvreGrense){
@@ -35,13 +35,13 @@ public class Oppgave1 {
             }
             else {
                 ut += i + " + ";
-                if (antall == 10){
+                if (i % 10 == 0){
                     ut += "\n";
-                    antall = 0;
+                    //antall = 0;
                 }
             }
             summen += i;
-            antall++;
+            //antall++;
         }
         System.out.println(ut + " = " + summen);
     }

@@ -16,8 +16,8 @@ public class Referanser {
     public static void main(String[] args) {
         Person enPerson = new Person();
         enPerson.navn = "Lee";
-        System.out.println(enPerson.navn);
-        endreNavn(enPerson, "Kari");   //这里的参数enPerson不是copy了一个Person的实例，而是一个referanse，即地址，perker，这也是之所以写这个方法的原因
-        System.out.println(enPerson.navn);
+        System.out.println(enPerson.navn);   //Lee
+        endreNavn(enPerson, "Kari");   //这里的参数enPerson不是copy了enPerson这个object，而是一个referanse，即perker指向enPerson的地址，这也是之所以写这个方法的原因
+        System.out.println(enPerson.navn);   //Kari
     }
 }
