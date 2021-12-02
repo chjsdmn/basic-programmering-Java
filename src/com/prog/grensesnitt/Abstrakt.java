@@ -1,5 +1,13 @@
 package com.prog.grensesnitt;
 
+/**抽象类
+ * 在Java中被abstract关键字修饰的类称为抽象类，被abstract关键字修饰的方法称为抽象方法，抽象方法只有方法的声明，没有方法体。特点：
+ * a、抽象类不能被实例化只能被继承；
+ * b、包含抽象方法的一定是抽象类，但是抽象类不一定含有抽象方法；
+ * c、抽象类中的抽象方法的修饰符只能为public或者protected，默认为public；
+ * d、一个子类继承一个抽象类，则子类必须实现父类抽象方法，否则子类也必须定义为抽象类；
+ * e、抽象类可以包含属性、方法、构造方法，但是构造方法不能用于实例化，主要用途是被子类调用。
+ */
 abstract class Kjøretøy{
     protected String farge;
     protected int antallHjul;

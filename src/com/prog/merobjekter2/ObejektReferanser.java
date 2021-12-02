@@ -28,7 +28,7 @@ public class ObejektReferanser {
         //创建新的对象，指向新的地址
         Bil BMW = new Bil("BMW");
 
-        //enBil于对象BMW指向同一地址，但是注意，volvo的地址并没有改变，仍然是047！！！！
+        //enBil与对象BMW指向同一地址，但是注意，volvo的地址并没有改变，仍然是047！！！！
         enBil = BMW;
         System.out.println("BMW: " + BMW);   //047
         System.out.println("enBil: " + enBil);   //047
