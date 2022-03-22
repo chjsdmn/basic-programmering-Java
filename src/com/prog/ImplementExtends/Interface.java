@@ -26,7 +26,7 @@ interface Animal extends Creature{  //接口Animal继承了接口Creature的方�
  * class 子类名 extends 父类名 implenments 接口名{...
  * }
  */
-class Fish implements Animal{  //Fish类要把两个方法都重写，否则要在前面加上abstract，变成抽象类，我也不知道为啥。。。
+class Fish implements Animal{  //Fish类要把两个方法都重写，否则要在前面加上abstract，变成抽象类
     @Override
     public void eat(){
         System.out.println("Fish eat mud");
@@ -65,7 +65,7 @@ class Bird implements Creature, Flyer{  //类通过关键字implements声明自�
     }
 }
 
-public class OmInterface {
+public class Interface {
     public static void main(String[] args) {
         Fish aFish = new Fish();
         aFish.eat();

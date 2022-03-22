@@ -41,10 +41,12 @@ class Selger2 extends Ansatt2{
     private static final double bonus = 10_000;  //定义常量 不能更改
     public static final int qian = 20;
     Selger2(String navn, double lønn){
+        //子类通过super（）来叫父类的构造器
         super(navn, lønn);
     }
     double getLønn(){
-        return super.getLønn() + this.bonus;  //lønn是private，所以这里用super.getLønn()获取数据
+        //lønn是private，所以这里用super.getLønn()获取数据
+        return super.getLønn() + this.bonus;
     }
 }
 

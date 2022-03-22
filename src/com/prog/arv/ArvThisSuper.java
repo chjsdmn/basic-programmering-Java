@@ -13,23 +13,23 @@ class Person {
     }
 
     Person() {
-        prt("父类·无参数构造方法： "+"A Person.");
+        prt("父类·无参数构造方法： " + "A Person.");
     }//构造方法(1)
 
     Person(String name) {
-        prt("父类·含一个参数的构造方法： "+"A person's name is " + name);
+        prt("父类·含一个参数的构造方法： " + "A person's name is " + name);
     }//构造方法(2)
 }
 
 public class ArvThisSuper extends Person {
     ArvThisSuper() {
         super(); // 调用父类构造方法（1）
-        prt("子类·调用父类”无参数构造方法“： "+"A chinese coder.");
+        prt("子类·调用父类”无参数构造方法“： " + "A chinese coder.");
     }
 
     ArvThisSuper(String name) {
         super(name);// 调用父类具有相同形参的构造方法（2）
-        prt("子类·调用父类”含一个参数的构造方法“： "+"his name is " + name);
+        prt("子类·调用父类”含一个参数的构造方法“： " + "his name is " + name);
     }
 
     /**
@@ -40,7 +40,7 @@ public class ArvThisSuper extends Person {
      * @param age
      */
     ArvThisSuper(String name, int age) {
-        this(name);// 调用具有相同形参的构造方法（3）
+        this(name);// 调用具有相同形参的构造方法（3），即调用的是本类中第二种构造方法，即调用父类构造方法
         prt("子类：调用子类具有相同形参的构造方法：his age is " + age);
     }
 

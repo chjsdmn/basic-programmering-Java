@@ -5,7 +5,7 @@ package com.prog.grensesnitt;
  * 依赖注入
  */
 interface SendMelding{
-    void send(String melding); //接口中的方法都是饮食public abstract，所以定义的时候不用写public
+    void send(String melding); //接口中的方法都是隐式public abstract，所以定义的时候不用写public
 }
 
 class Epost implements SendMelding{
@@ -21,6 +21,7 @@ class Sms implements SendMelding{
 }
 
 class Melding{  //这个相当于composition啊~~
+    //貌似是松耦合?? 因为interface的type成为这个class的一个属性
     private final SendMelding meldingType;  //vet ikke hvorfor bruker final
 
     //constructor

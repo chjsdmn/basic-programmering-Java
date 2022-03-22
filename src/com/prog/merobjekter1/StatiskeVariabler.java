@@ -10,7 +10,7 @@ class Bil{
      * 1. 名称都用大写  STORE_BOKSTAVER
      * 2. 用的时候直接类名.+ 常量名(Bil.ANTALL_HJUL)，不需要用实例名.+常量名
      */
-    static final int ANTALL_HJUL = 4; //当变量设置成static final的时候，这就是一个常量，名称都用大写
+    static final int ANTALL_HJUL = 4;
     /**
      * 没有final修饰符的static attribute可以更改，但是同static final一样，修改和使用的时候都用类名.+的方式
      *

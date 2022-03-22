@@ -1,7 +1,8 @@
 package com.prog.grensesnitt;
 
 /**抽象类
- * 在Java中被abstract关键字修饰的类称为抽象类，被abstract关键字修饰的方法称为抽象方法，抽象方法只有方法的声明，没有方法体。特点：
+ * 在Java中被abstract关键字修饰的类称为抽象类，被abstract关键字修饰的方法称为抽象方法，
+ * 抽象方法只有方法的声明，没有方法体。特点：
  * a、抽象类不能被实例化只能被继承；
  * b、包含抽象方法的一定是抽象类，但是抽象类不一定含有抽象方法；
  * c、抽象类中的抽象方法的修饰符只能为public或者protected，默认为public；
@@ -30,11 +31,13 @@ abstract class Kjøretøy{
 
 /**
  * 因为也是抽象类，所以即使继承了抽象类，也不需要override父类的抽象方法!
+ * 用extends可以理解为全盘继承了父类的功能。
  */
 abstract class Flytøy extends Kjøretøy{
     protected int tankVolum;
 
     public Flytøy(String farge, int antallHjul, int tankVolum){
+        //子类通过super（）来叫父类的构造器
         super(farge, antallHjul);
         this.tankVolum = tankVolum;
     }
@@ -43,6 +46,7 @@ abstract class Flytøy extends Kjøretøy{
 class Bil extends Kjøretøy{
     protected int antallDører;
     public Bil(String farge, int antallHjul, int antallDører){
+        //子类通过super（）来叫父类的构造器
         super(farge, antallHjul);
         this.antallDører = antallDører;
     }

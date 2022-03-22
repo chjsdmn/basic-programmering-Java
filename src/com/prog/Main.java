@@ -1,34 +1,59 @@
 package com.prog;
 
+import java.util.ArrayList;
 
-public class Main {
-    public static void main(String[] args) {
-        int[] tab = {1};
-        int a = 2;
-        minProsedyre(tab, a);
-        System.out.println(tab[0]);  //3
-        System.out.println(a);  //2
-
-        int[] x = {2,4,6,8,10};
-        ukjent(x[4]);
-        System.out.println(x[4]);  //10
-
-        int m = 0;
-        for(int i = 1; i <= 5; i++) {
-            for(int j = 1; j <= i; j++)  {
-                m++;
-            }
+class Person{
+    private String navn;
+    private String adresse;
+    private String telefonnr;
+    public Person(String navn, String adresse, String telefonnr){
+        this.navn = navn;
+        this.adresse = adresse;
+        this.telefonnr = telefonnr;
+    }
+    public String toString(){
+        String ut = "Navn: " + navn + "\nAdresse: " + adresse + "\nTelefonnr: " + telefonnr;
+        return ut;
+    }
+}
+class Student extends Person{
+    private String studentnr;
+    private String studienavn;
+    public Student(String navn, String adresse, String telefonnr, String studentnr, String studienavn){
+        super(navn, adresse, telefonnr);
+        this.studentnr = studentnr;
+        this.studienavn = studienavn;
+    }
+    public String toString(){
+        String ut = "Student: \n" + super.toString();
+        ut += "\nStudentnr: " + studentnr + "\nStudienavn: " + studienavn;
+        return ut;
+    }
+}
+class Ansatt extends Person{
+    private String intituttnavn;
+    private double lonn;
+    public Ansatt(String navn, String adresse, String telefonnr, String intituttnavn, double lonn){
+        super(navn, adresse, telefonnr);
+        this.intituttnavn = intituttnavn;
+        this.lonn = lonn;
+    }
+    public String toString(){
+        String ut = "Ansattt: \n" + super.toString();
+        ut += "\nIntituttnavn: " + intituttnavn + "\nLonn: " + lonn;
+        return ut;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Student student = new Student("Per", "Osloveien 50", "98756311", "s95578", "IT");
+        Ansatt ansatt = new Ansatt("Kari", "Bergenveien 29c", "86745723", "UIO", 60000.0);
+        ArrayList<Person> list = new ArrayList<>();
+        list.add(student);
+        list.add(ansatt);
+        for(Person en : list){
+            System.out.println(en);
         }
-        System.out.println(m);
-    }
-
-    public static void minProsedyre(int[] tab, int a) {
-        tab[0] = 3;
-        a = 4;
-    }
-
-    public static void ukjent(int x) {
-        x *= x;
     }
 }
 

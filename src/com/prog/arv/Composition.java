@@ -4,7 +4,7 @@ package com.prog.arv;
  * Composition组合比arv继承更普遍被应用（在我们开发的这个level）
  * arv更常用于底层架构时
  * Composition er kanskje den vanligste måten å løse disse problemstillingene i koden som vi selv utvikler.
- * Arv blir absolutt også brukt, men da som oftest i bakenforliggende arkitekturer
+ * Arv blir absolutt også brukt, men da som oftest i bakenforliggende arkitekturer 底层架构
  */
 
 class Folk{
@@ -13,7 +13,7 @@ class Folk{
     public String telefonnr;
 }
 
-//arv
+//arv继承
 class Student extends Folk{
     public String sNummer;
     public String studieNavn;
@@ -31,14 +31,16 @@ class Lærer extends Folk{
     }
 }
 
-//composition
+//composition组合
 class Student2{
     public String sNummer;
     public String studieNavn;
+    //Folk类作为这个class的一个属性！！
     public Folk folk;
 
     Student2(){
-        this.folk = new Folk(); //这个Folk的实例一定要叫, 否则这个类的实例无法使用folk这个属性!!!!
+        //这个Folk的实例一定要叫, 否则这个类的实例无法使用folk这个属性!!!!
+        this.folk = new Folk();
     }
     public String toString(){
         return folk.navn + " " + folk.telefonnr + " " + this.studieNavn;
@@ -47,10 +49,12 @@ class Student2{
 
 class Lærer2{
     public String institutt;
+    //Folk类作为这个class的一个属性！！
     public Folk folk;
 
     Lærer2(){
-        this.folk = new Folk();  //这个Folk的实例一定要叫, 否则这个类的实例无法使用folk这个属性!!!!
+        //这个Folk的实例一定要叫, 否则这个类的实例无法使用folk这个属性!!!!
+        this.folk = new Folk();
     }
 
     public String toString(){

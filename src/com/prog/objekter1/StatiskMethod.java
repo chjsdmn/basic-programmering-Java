@@ -16,7 +16,3 @@ public class StatiskMethod {
         System.out.println(Vare.number);
     }
 }
-/**
- * 总结
- * 静态字段和静态方法都不属于实例，而属于class，所以要用类名来调用！！！
- */
