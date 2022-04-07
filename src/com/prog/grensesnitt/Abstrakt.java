@@ -8,6 +8,10 @@ package com.prog.grensesnitt;
  * c、抽象类中的抽象方法的修饰符只能为public或者protected，默认为public；
  * d、一个子类继承一个抽象类，则子类必须实现父类抽象方法，否则子类也必须定义为抽象类；
  * e、抽象类可以包含属性、方法、构造方法，但是构造方法不能用于实例化，主要用途是被子类调用。
+ *
+ * 抽象方法，
+ * 没有方法体!!
+ *
  */
 abstract class Kjøretøy{
     protected String farge;
